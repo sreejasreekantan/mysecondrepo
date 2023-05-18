@@ -1,0 +1,8 @@
+<template>
+    <template if:true={pstatus}>
+        <p><lightning-input value="I am success"></lightning-input></p>
+    </template>
+    <template if:false={pstatus}>
+        <p><lightning-input value="I am failure"></lightning-input></p>
+    </template>
+</template>

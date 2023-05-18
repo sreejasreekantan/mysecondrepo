@@ -1,0 +1,28 @@
+<template>
+	<template if:true={loader}>
+		<lightning-spinner alternative-text="Loading..." size="small"></lightning-spinner>
+	</template>
+	<lightning-layout>
+		
+	
+		
+	</lightning-layout>
+	<lightning-card title="Datatable Pagination_Version3 (Client Side Pagiantion)" icon-name="standard:account">
+		<lightning-datatable data-id="table" key-field="Id" data={data} columns={columns}
+			sorted-direction={sortedDirection} onrowselection={onRowSelection} max-row-selection ="1"
+			>
+		</lightning-datatable>
+		<div class="slds-m-around_medium">
+			<center>
+				<lightning-button label="Previous" variant="brand" icon-name="utility:chevronleft" onclick={previousHandler}>
+				</lightning-button>
+				&nbsp; Page {page} of {totalPage} &nbsp;
+				<lightning-button label="Next" variant="brand" icon-name="utility:chevronright" icon-position="right"
+					onclick={nextHandler}>
+				</lightning-button>
+			</center>
+		</div>
+	</lightning-card>
+
+
+ </template>

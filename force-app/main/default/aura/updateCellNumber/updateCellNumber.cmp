@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+	  <lightning:card  title="Hello">
+       
+        <p class="slds-p-horizontal_small">
+              <lightning:input type="tel" label="Cell Number" name="phone" aura:id='phone' placeholder="343-343-3434" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+             <lightning:button variant="success" label="Update"  onclick="{! c.handleClick }"/>
+
+        </p>
+    </lightning:card>
+  
+</aura:component>

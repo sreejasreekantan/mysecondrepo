@@ -1,0 +1,36 @@
+<template>
+	<template if:true={loader}>
+		<lightning-spinner alternative-text="Loading..." size="small"></lightning-spinner>
+	</template>
+	<lightning-layout>
+		<!--<lightning-layout-item padding="around-small" size="4">
+			<lightning-combobox style="width:80px;" name="StageName" label="Show Entries" value={pageSize} options={options}
+				onchange={handleChange}></lightning-combobox>
+		</lightning-layout-item>
+		 <lightning-layout-item style="padding-top: 34px;" size="4">
+						<lightning-button icon-name="utility:desktop" label="Show Selected Account" variant="brand" onclick={showSelectedAccounts}></lightning-button>
+			
+		</lightning-layout-item> 
+		<lightning-layout-item padding="around-small" size="4">
+			<lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search" value={searchKey} placeholder="Type Account Name..">
+			</lightning-input>
+		</lightning-layout-item>-->
+	</lightning-layout>
+	<lightning-card title="Client Side Pagination With Out Search" icon-name="standard:account">
+		<lightning-datatable data-id="table" key-field="Id" data={data} columns={columns} 
+			sorted-direction={sortedDirection} onrowselection={onRowSelection} selected-rows={allSelectedRows}
+			 max-row-selection="1">
+		</lightning-datatable>
+		<div class="slds-m-around_medium">
+			
+				<lightning-button label="Previous" variant="brand" icon-name="utility:chevronleft" onclick={previousHandler}>
+				</lightning-button>
+				&nbsp; Page {page} of {totalPage} &nbsp;
+				<lightning-button label="Next" variant="brand" icon-name="utility:chevronright" icon-position="right"
+					onclick={nextHandler}>
+				</lightning-button>
+			
+		</div>
+	</lightning-card>
+	
+ </template>
